@@ -61,7 +61,7 @@ export function applyBend(material, { outline = 0, curved = true, wind = 0, wind
       //     the surface turns away from the eye — the silhouette — so weighting
       //     by that thickens the outline and thins everything facing us.
       //
-      // ⚠ Under instancing the normal has to go through instanceMatrix too,
+      // NOTE: Under instancing the normal has to go through instanceMatrix too,
       // or every blade of instanced grass weights its outline off the wrong
       // orientation.
       vs = vs.replace(
@@ -156,7 +156,7 @@ export function applyBend(material, { outline = 0, curved = true, wind = 0, wind
         )
     }
   }
-  // ⚠ the cache key MUST include every branch above, or two materials with
+  // NOTE: the cache key MUST include every branch above, or two materials with
   // different options silently share the first one's compiled program.
   material.customProgramCacheKey = () =>
     `dw2-${material.type}-${curved ? 'c' : 'f'}-${outline > 0 ? 'o' : 's'}-${wind > 0 ? (windLocal ? 'wl' : 'w') : 'n'}-${lit ? 'l' : 'x'}`

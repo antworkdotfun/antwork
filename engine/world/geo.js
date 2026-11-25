@@ -52,7 +52,7 @@ export function paint(geo, hex, mul = 1) {
   }
   geo.setAttribute('color', new THREE.BufferAttribute(arr, 3))
 
-  // ⚠ EVERY painted geometry must carry this, even when it is zero:
+  // NOTE: EVERY painted geometry must carry this, even when it is zero:
   // mergeGeometries refuses a mix where some inputs have an attribute and
   // others do not, and the whole town goes through one merge.
   // Not every window is lit: about two in three come on, each at its own
