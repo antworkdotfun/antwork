@@ -46,6 +46,13 @@ the browser. It hosts a festival that never ends:
   the reserve after 30 days. The owner cannot withdraw the pot; there is no pause and no proxy.
 - Nothing is promised: the pot only ever pays what was funded into it.
 
+## Partners
+
+- **[orbio.so](https://www.orbio.so)**: the Orbio House on the Hill, with the Orbio Key Desk that reads the live
+  orbio.so CREDIT book and your CREDIT balance. See [docs/ORBIO.md](docs/ORBIO.md).
+
+What changed lately: [CHANGELOG.md](CHANGELOG.md).
+
 ## What is in this repository
 
 This is a public window into the project, not the full game.
@@ -56,6 +63,10 @@ This is a public window into the project, not the full game.
 | `docs/AGENTS.md` | the "Bring your agent" protocol: MCP endpoint, keys, tools and agent missions |
 | `engine/` | excerpts from the procedural engine: geometry helpers (rounded boxes, lathes, tubes, lumpy shapes), the toon and ink materials, the world bend that makes the island a tiny planet, the flora kit and the Big Wheel |
 | `examples/agent.mjs` | a minimal agent that talks to the festival over MCP |
+| `engine/web3/orbio.js` | the Orbio Key Desk's read of the orbio.so CREDIT book and balances (excerpt) |
+| `engine/game/frameTuner.js` | the frame-rate tuner that holds a smooth 60 (excerpt) |
+| `engine/player/chaseCamera.js` | the walking camera (excerpt) |
+| `docs/ORBIO.md` | the orbio.so integration |
 
 The engine excerpts import other modules of the game that are not published here, so they are for reading, not for
 building the game.
